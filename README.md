@@ -46,5 +46,9 @@
 *  conversation 데이터를 모두 수집하였다.
 ---
 * 장소 클릭시 장소id값 반환 후, conversation 정보를 출력하였다.
-  - 타입 A나 B에 따라 구별하여 대화창 구현해야함!
+  - http://localhost:8080/api/conversations/place/{id값}
 * 해당장소의 media 정보 출력해야함!.
+--- 
+* 타입(A, B)에 따라 구별하여 대화창을 구현하였다.
+* media테이블에 대한 데이터를 해당 api에 담아놓았다.
+  - http://localhost:8080/api/media/{id값}
