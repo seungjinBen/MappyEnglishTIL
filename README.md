@@ -65,3 +65,6 @@
 * Firebase의 resize images라는 extension을 이용해 이미지의 크기를 대폭 줄였다.
 ---
 * Text-to-Speech API → 영어 발음 음성 제공
+---
+* 배포 전 성능테스트
+* Postman -> 데이터조회, 회원가입, 나의 대화카드 저장,조회,삭제 등
