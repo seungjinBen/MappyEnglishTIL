@@ -79,6 +79,7 @@
 * React -> Next.js 변환
 ---
 * 대화 생성 기능(JPA기능-영속성 컨텍스트&변경감지 -> SQL 쿼리 작성 필요X)
-  - isNew()로 기본키인 id값 확인 -> 기존 DB에서 해당 장소의 값이 있다면 UPDATE-EntityManager.merge() 없으면 INSERT-EntityManager.persist() (이전문장은 초기화)
+  - isNew()로 기본키인 id값 확인 -> 기존 DB에서 해당 장소의 값이 있다면 UPDATE-EntityManager.merge()
+  - 없으면 INSERT-EntityManager.persist() (이전문장은 초기화)
 * OpenAI(gpt-4o-mini모델) 사용: 역할 부여 + 명확한 제약조건 + 템플릿 예시
   - model, messages, temperature 지정
