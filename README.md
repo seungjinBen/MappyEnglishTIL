@@ -1,7 +1,7 @@
 ### MappyEnglish프로젝트 진행과정
 
 
-## SpringBoot + React + PostgreSQL
+## SpringBoot + React->Next.js + PostgreSQL
 * 모바일 퍼스트 + 휴대폰 화면 대응
   - viewport-fit=cover로 안전영역 변수가 활성화되어 노치/홈바를 피할 수 있음.
 * 반응형 이미지 -> 작은 폰에는 작은 이미지, 큰 폰에는 큰 이미지가 자동 선택
@@ -75,3 +75,10 @@
 * Postman -> 데이터조회, 회원가입, 나의 대화카드 저장,조회,삭제 등
 * k6 -> 장소데이터, 이미지데이터 조회 -> 50명 동시접속, 지속시간 5분이상 해도 안정적(총 요청 수: 14,921건, 데이터 전송량: 883 MB, avg: 5.83ms, p95: 10.2ms)
 * 다음 웹앱에선 Cypress 사용해보기
+---
+* React -> Next.js 변환
+---
+* 대화 생성 기능(JPA기능-영속성 컨텍스트&변경감지 -> SQL 쿼리 작성 필요X)
+  - isNew()로 기본키인 id값 확인 -> 기존 DB에서 해당 장소의 값이 있다면 UPDATE-EntityManager.merge() 없으면 INSERT-EntityManager.persist() (이전문장은 초기화)
+* OpenAI(gpt-4o-mini모델) 사용: 역할 부여 + 명확한 제약조건 + 템플릿 예시
+  - model, messages, temperature 지정
