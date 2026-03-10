@@ -77,6 +77,7 @@
 * 다음 웹앱에선 Cypress 사용해보기
 ---
 * React -> Next.js 변환
+* 장소 마커, 디자인 전체적으로 변경
 ---
 * 대화 생성 기능(JPA기능-영속성 컨텍스트&변경감지 -> SQL 쿼리 작성 필요X)
   - isNew()로 기본키인 id값 확인 -> 기존 DB에서 해당 장소의 값이 있다면 UPDATE-EntityManager.merge()
