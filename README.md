@@ -91,3 +91,6 @@
   - 3. OpenAI TTS 호출: 백엔드에서 1번 문장부터 차례대로 OpenAI API에 영어 텍스트를 던져서 mp3 파일(byte 배열)을 받아옴.
   - 4. Firebase 업로드: 받아온 mp3 데이터를 백엔드에서 Firebase Storage로 바로 업로드.
   - 5. URL 획득 및 DB 저장: Firebase가 뱉어준 다운로드 URL(https://firebasestorage...)을 audioUrl1, audioUrl2 컬럼에 넣고 최종적으로 DB에 UPDATE 처리!
+* 느린 속도 -> 최적화 진행
+  - 커스텀 마커들을 useMemo로 묶어서 불필요한 재렌더링 차단 <- 상태(open, selectedPlace 등)가 조금만 변해도 마커를 다 다시 계산해 그리던 상태
+  - center 와 zoom 고정, 이동은 panTo함수로만 <- 지도 렌더링 충돌
