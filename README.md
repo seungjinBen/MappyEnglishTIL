@@ -84,3 +84,10 @@
   - 없으면 INSERT-EntityManager.persist() (이전문장은 초기화)
 * OpenAI(gpt-4o-mini모델) 사용: 역할 부여 + 명확한 제약조건 + 템플릿 예시
   - model, messages, temperature 지정
+---
+* TTS음성파일 생성 및 DB저장 프로세스
+  - 1. 프론트엔드: 관리자가 대화를 확인/수정 후 [저장하기] 버튼 클릭.
+  - 2. 백엔드 (스프링 부트): 데이터를 넘겨받음.
+  - 3. OpenAI TTS 호출: 백엔드에서 1번 문장부터 차례대로 OpenAI API에 영어 텍스트를 던져서 mp3 파일(byte 배열)을 받아옴.
+  - 4. Firebase 업로드: 받아온 mp3 데이터를 백엔드에서 Firebase Storage로 바로 업로드.
+  - 5. URL 획득 및 DB 저장: Firebase가 뱉어준 다운로드 URL(https://firebasestorage...)을 audioUrl1, audioUrl2 컬럼에 넣고 최종적으로 DB에 UPDATE 처리!
