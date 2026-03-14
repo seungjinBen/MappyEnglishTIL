@@ -98,8 +98,8 @@
 * OpenAI Whisper API 연동 - 절대주소 & API Key 지정
   - STT 엔진으로 브라우저 내장 API 대신, OpenAI의 최첨단 Whisper 모델을 연동하여 인식률과 안정성 확보
 * 변환(STT사용)->정제(텍스트 대소문자 통일, 특수기호 제거) ->채점(문장의 유사도 계산)
-* 1단계: 사용자가 말한 음성파일(record.webm) -> /api/stt/evaluate 로 전달
-* 2단계: STT-API Key를 챙겨 OpenAI의 절대주소로(WebClient사용)
-* 3단계: Whisper모델이 음성을 듣고 영어텍스트로 변환
-* 4단계: 백엔드 채점(정제 진행)
-* 5단계: 성적표(SttResultDto) 프론트엔드로 전달
+  - 1단계: 사용자가 말한 음성파일(record.webm) -> /api/stt/evaluate 로 전달
+  - 2단계: STT-API Key를 챙겨 OpenAI의 절대주소로(WebClient사용)
+  - 3단계: Whisper모델이 음성을 듣고 영어텍스트로 변환
+  - 4단계: 백엔드 채점(정제 진행)
+  - 5단계: 성적표(SttResultDto) 프론트엔드로 전달
