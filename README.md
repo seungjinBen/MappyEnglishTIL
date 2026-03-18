@@ -94,3 +94,6 @@
 * 느린 속도 -> 최적화 진행
   - 커스텀 마커들을 useMemo로 묶어서 불필요한 재렌더링 차단 <- 상태(open, selectedPlace 등)가 조금만 변해도 마커를 다 다시 계산해 그리던 상태
   - center 와 zoom 고정, 이동은 panTo함수로만 <- 지도 렌더링 충돌
+---
+* OpenAI Whisper API 연동 - 절대주소 & API Key 지정
+  - STT 엔진으로 브라우저 내장 API 대신, OpenAI의 최첨단 Whisper 모델을 연동하여 인식률과 안정성 확보
